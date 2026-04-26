@@ -1,0 +1,13 @@
+﻿@model List<Course>
+
+<h2>Courses</h2>
+<a href="/Course/Create">Add Course</a>
+
+@foreach (var c in Model)
+{
+	<p>
+		@c.CourseName
+		<a href="/Course/Edit/@c.CourseId">Edit</a>
+		<a href="/Course/Delete/@c.CourseId">Delete</a>
+	</p>
+}

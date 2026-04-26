@@ -1,0 +1,15 @@
+﻿@model List<Enrollment>
+
+<h2>Enrollments</h2>
+<a href="/Enrollment/Create">Add</a>
+
+@foreach (var e in Model)
+{
+	<p>
+		Student: @e.StudentId | Subject: @e.SubjectId
+		<a href="/Enrollment/Edit/@e.StudentId">Edit</a>
+		<a href="/Enrollment/Delete/@e.StudentId">Delete</a>
+		<a href="/Enrollment/Edit/@e.SubjectId">Edit</a>
+		<a href="/Enrollment/Delete/@e.SubjectId">Delete</a>
+	</p>
+}

@@ -1,0 +1,13 @@
+﻿@model List<Subject>
+
+<h2>Subjects</h2>
+<a href="/Subject/Create">Add</a>
+
+@foreach (var s in Model)
+{
+	<p>
+		@s.SubjectName (Instructor: @s.InstructorId)
+		<a href="/Subject/Edit/@s.SubjectId">Edit</a>
+		<a href="/Subject/Delete/@s.SubjectId">Delete</a>
+	</p>
+}

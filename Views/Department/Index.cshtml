@@ -1,0 +1,13 @@
+﻿@model List<Department>
+
+<h2>Departments</h2>
+<a href="/Department/Create">Add</a>
+
+@foreach (var d in Model)
+{
+	<p>
+		@d.DepartmentName
+		<a href="/Department/Edit/@d.DepartmentId">Edit</a>
+		<a href="/Department/Delete/@d.DepartmentId">Delete</a>
+	</p>
+}
